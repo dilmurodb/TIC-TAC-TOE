@@ -1,0 +1,19 @@
+body {
+    background-color: lightblue;
+}
+
+.container {
+    display: flex;
+    background-color: black;
+    flex-wrap: wrap;
+    width: 314px;
+    margin: auto;
+}
+
+.squares {
+    width: 100px;
+    height: 100px;
+    background-color: white;
+    margin: 2px;
+    pointer-events: auto;
+}
