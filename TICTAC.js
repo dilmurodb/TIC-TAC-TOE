@@ -6,11 +6,22 @@ const grids = document.querySelectorAll(".squares")
 let turn = 0
 for (let i=0; i<grids.length; i++) {
     grids[i].addEventListener("click", function changeColor() {
-        if (turn % 2 === 0) {
-            grids[i].style.backgroundColor = "blue";
+        if (turn % 2 === 0) { 
+            if (grids[i].style.backgroundColor !== "blue" && grids[i].style.backgroundColor !== "red") {
+                
+                grids[i].style.backgroundColor = "blue";
+            } else {
+                turn--
+            }
             turn++
-        } else {
-            grids[i].style.backgroundColor = "red";
+        } else { 
+            if (grids[i].style.backgroundColor !== "blue" && grids[i].style.backgroundColor !== "red") {
+                
+                grids[i].style.backgroundColor = "red";
+            } else {
+                turn--
+            }
+            // grids[i].style.backgroundColor = "red";
             turn++
         }
     })
