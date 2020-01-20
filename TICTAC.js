@@ -1,5 +1,6 @@
 const grids = document.querySelectorAll(".squares");
 let turn = 0;
+amount = 0;
 for (let i = 0; i < grids.length; i++) {
   grids[i].addEventListener("click", function changeColor() {
     if (turn % 2 === 0) {
@@ -56,6 +57,11 @@ for (let i = 0; i < grids.length; i++) {
           grids[8].style.backgroundColor === "blue"
         ) {
           alert("blue won");
+        } else {
+          amount++;
+          if (amount === 9) {
+            alert("its atie");
+          }
         }
       } else {
         turn--;
@@ -115,6 +121,11 @@ for (let i = 0; i < grids.length; i++) {
           grids[8].style.backgroundColor === "red"
         ) {
           alert("red won");
+        } else {
+          amount++;
+          if (amount === 9) {
+            alert("its atie");
+          }
         }
       } else {
         turn--;
@@ -128,5 +139,6 @@ let button = document.querySelector(".button");
 button.addEventListener("click", function resetGame() {
   for (let i = 0; i < grids.length; i++) {
     grids[i].style.backgroundColor = "white";
+    amount = 0;
   }
 });
