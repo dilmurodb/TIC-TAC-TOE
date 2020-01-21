@@ -60,7 +60,7 @@ for (let i = 0; i < grids.length; i++) {
         } else {
           amount++;
           if (amount === 9) {
-            alert("its atie");
+            alert("It is a Tie");
           }
         }
       } else {
@@ -124,7 +124,7 @@ for (let i = 0; i < grids.length; i++) {
         } else {
           amount++;
           if (amount === 9) {
-            alert("its atie");
+            alert("It is a Tie");
           }
         }
       } else {
