@@ -76,6 +76,7 @@ for (let i = 0; i < grids.length; i++) {
         grids[i].style.backgroundColor !== "red"
       ) {
         grids[i].style.backgroundColor = "red";
+        turnIndicator.style.backgroundColor = "blue";
         if (
           grids[0].style.backgroundColor === "red" &&
           grids[1].style.backgroundColor === "red" &&
@@ -142,6 +143,7 @@ let button = document.querySelector(".button");
 button.addEventListener("click", function resetGame() {
   for (let i = 0; i < grids.length; i++) {
     grids[i].style.backgroundColor = "white";
+    turnIndicator.style.backgroundColor = "blue";
     checkbox = 0;
     turn = 0;
   }
