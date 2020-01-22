@@ -1,4 +1,6 @@
 const grids = document.querySelectorAll(".squares");
+const turnIndicator = document.getElementById("turnbox");
+turnIndicator.style.backgroundColor = "blue";
 let turn = 0;
 checkbox = 0;
 for (let i = 0; i < grids.length; i++) {
@@ -9,6 +11,7 @@ for (let i = 0; i < grids.length; i++) {
         grids[i].style.backgroundColor !== "red"
       ) {
         grids[i].style.backgroundColor = "blue";
+        turnIndicator.style.backgroundColor = "red";
         if (
           grids[0].style.backgroundColor === "blue" &&
           grids[1].style.backgroundColor === "blue" &&
@@ -140,5 +143,6 @@ button.addEventListener("click", function resetGame() {
   for (let i = 0; i < grids.length; i++) {
     grids[i].style.backgroundColor = "white";
     checkbox = 0;
+    turn = 0;
   }
 });
